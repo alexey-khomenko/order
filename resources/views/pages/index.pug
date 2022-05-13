@@ -1,0 +1,48 @@
+extends ../layouts/default
+
+block title
+  | Оплата заказа №71964
+
+block main
+  - title = "Оплата на территории России";
+  - price = "11 000₽";
+  include index/heading
+  -
+    cards = [
+      {
+        src: 'images/visa.svg',
+        cls: 'visa',
+      },
+      {
+        src: 'images/sberbank.svg',
+        cls: 'sberbank',
+      },
+      {
+        src: 'images/tinkoff.svg',
+        cls: 'tinkoff',
+      },
+    ];
+  include index/cards-a
+
+  - title = "Оплата по всему миру";
+  - price = "119$";
+  include index/heading
+  -
+    cards = [
+      {
+        src: 'images/visa.svg',
+        cls: 'visa',
+        title: 'Оплата картой',
+      },
+      {
+        src: 'images/sberbank.svg',
+        cls: 'sberbank',
+        title: 'Сбербанк',
+      },
+      {
+        src: 'images/tinkoff.svg',
+        cls: 'tinkoff',
+        title: 'Тинькофф',
+      },
+    ];
+  include index/cards-b

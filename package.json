@@ -1,0 +1,27 @@
+{
+  "name": "mix-preset",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexey-khomenko/mix-preset.git"
+  },
+  "scripts": {
+    "dev": "npx mix",
+    "watch": "npx mix watch",
+    "watch-poll": "npx mix watch -- --watch-options-poll=1000",
+    "hot": "npx mix watch --hot"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "6.0.18",
+    "laravel-mix-pug-recursive": "^0.3.6",
+    "pug": "^3.0.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0"
+  }
+}

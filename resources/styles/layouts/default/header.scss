@@ -1,0 +1,154 @@
+@import "././resources/styles/_/variables";
+@import "././resources/styles/_/mixins";
+
+.header {
+  &-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 40px 0;
+    border-bottom: 1px solid #C9CAD2;
+
+    @include mq($media-md) {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+
+    @include mq($media-sm) {
+      margin-bottom: 20px;
+      padding-bottom: 40px;
+    }
+
+    .logo {
+      &-link {
+        display: block;
+        text-decoration: none;
+        width: $logo-w;
+        height: $logo-h;
+      }
+
+      &-image {
+        display: block;
+        width: $logo-w;
+        height: $logo-h;
+      }
+    }
+
+    .title {
+      flex-grow: 1;
+      display: block;
+      margin: 0;
+      padding: 0 #{$container-px + $logo-w} 0 $container-px;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 40px;
+      text-align: center;
+      color: #000000;
+
+      @include mq($media-md) {
+        padding: 40px 0 0;
+      }
+
+      @include mq($media-sm) {
+        padding-top: 30px;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 30px;
+    border-radius: 6px;
+    background-color: #F8F8F8;
+
+    @include mq($media-md) {
+      flex-direction: column;
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+    }
+
+    @include mq($media-sm) {
+      align-items: stretch;
+    }
+
+    .info {
+      display: block;
+      margin: 0;
+      max-width: 732px;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 36px;
+      text-align: left;
+      color: #000000;
+
+      @include mq($media-md) {
+        margin-bottom: 36px;
+      }
+
+      @include mq($media-sm) {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      @include mq($media-md) {
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 40px 20px 0 0;
+        border-top: 1px solid #C9CAD2;
+      }
+
+      @include mq($media-sm) {
+        justify-content: flex-end;
+        padding: 20px 0 0;
+      }
+
+      &-old {
+        display: block;
+        margin: 0 0 10px 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+        text-decoration: line-through;
+        text-transform: uppercase;
+        color: #606060;
+
+        @include mq($media-md) {
+          margin: 6px 0 0 16px;
+        }
+
+        @include mq($media-sm) {
+          margin: 4px 0 0 10px;
+        }
+      }
+
+      &-new {
+        display: block;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: right;
+        color: #000000;
+
+        @include mq($media-sm) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

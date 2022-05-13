@@ -1,0 +1,15 @@
+div(class="cards")
+  each card in cards
+    div(class="card")
+      div(class="card-wrapper")
+        img(src=`${card.src}`, class=`card-image ${card.cls}`, alt="")
+      div(class="card-title")
+        | #{card.title}
+      hr(class="card-hr")
+      div(class="card-subtitle")
+        | Для населения всего мира
+      div(class="card-price")
+        | 119$
+      button(type="button", class="card-button")
+        span
+          | Оплатить

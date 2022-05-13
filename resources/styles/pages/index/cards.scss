@@ -1,0 +1,186 @@
+@import "././resources/styles/_/variables";
+@import "././resources/styles/_/mixins";
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+  @include mq($media-md) {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+
+  @include mq($media-sm) {
+    grid-gap: 16px;
+  }
+}
+
+.card {
+  display: block;
+  padding: 30px;
+  border: 1px solid #C9CAD2;
+  border-radius: 6px;
+
+  @include mq($media-md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+  }
+
+  @include mq($media-sm) {
+    padding: 20px 10px;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 78px;
+
+    @include mq($media-md) {
+      height: 58px;
+    }
+
+    @include mq($media-sm) {
+      height: 40px;
+    }
+  }
+
+  &-image {
+    display: block;
+    max-width: 100%;
+
+    &.visa {
+      height: 44px;
+
+      @include mq($media-md) {
+        height: 44px;
+      }
+
+      @include mq($media-sm) {
+        height: 26px;
+      }
+    }
+
+    &.sberbank {
+      height: 44px;
+
+      @include mq($media-md) {
+        height: 44px;
+      }
+
+      @include mq($media-sm) {
+        height: 22px;
+      }
+    }
+
+    &.tinkoff {
+      height: 78px;
+
+      @include mq($media-md) {
+        height: 58px;
+      }
+
+      @include mq($media-sm) {
+        height: 40px;
+      }
+    }
+  }
+
+  &-title {
+    display: block;
+    padding: 30px 0 10px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: left;
+    color: #000000;
+
+    @include mq($media-md) {
+      display: none;
+    }
+  }
+
+  &-hr {
+    display: block;
+    height: 1px;
+    margin: 30px 0 40px;
+    background-color: #C9CAD2;
+    border: none;
+
+    @include mq($media-md) {
+      display: none;
+    }
+  }
+
+  &-subtitle {
+    display: block;
+    padding: 8px 0 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: #606060;
+
+    @include mq($media-md) {
+      display: none;
+    }
+  }
+
+  &-price {
+    display: block;
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: left;
+    color: #000000;
+
+    @include mq($media-md) {
+      display: none;
+    }
+  }
+
+  &-button {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    width: 100%;
+    height: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #4279E3;
+    border-radius: 99999px;
+    background-color: #4279E3;
+
+    @include mq($media-md) {
+      width: 224px;
+    }
+
+    @include mq($media-sm) {
+      width: auto;
+      height: 38px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: #4279E3;
+        background-color: #FFFFFF;
+      }
+    }
+
+    &:active {
+      color: #4279E3;
+      background-color: #FFFFFF;
+    }
+  }
+}

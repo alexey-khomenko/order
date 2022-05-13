@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="initial-scale=1.0, width=device-width")
+    include _/favicons
+    include _/styles
+    link(rel="stylesheet", href="css/layouts/default.css")
+    title
+      block title
+  body(class="page-body")
+    div(class="container")
+      include default/header
+      block main
+      include default/footer
+    include default/modal
+    script(src="js/base.js", async="async")

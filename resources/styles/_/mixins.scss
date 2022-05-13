@@ -1,0 +1,6 @@
+@mixin mq($from) {
+  @media (max-width: #{$from - 0.02}px) {
+    @content;
+  }
+}
+

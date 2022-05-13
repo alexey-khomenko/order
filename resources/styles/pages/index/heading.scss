@@ -1,0 +1,59 @@
+@import "././resources/styles/_/variables";
+@import "././resources/styles/_/mixins";
+
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 60px 0 44px;
+
+  @include mq($media-md) {
+    justify-content: space-between;
+    margin: 80px 0 50px;
+  }
+
+  @include mq($media-sm) {
+    flex-wrap: wrap;
+    margin: 50px 0 20px;
+  }
+
+  &-title {
+    display: block;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: left;
+    color: #000000;
+
+    @include mq($media-sm) {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &-price {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: left;
+    color: #4279E3;
+    border: 1px solid #4279E3;
+    border-radius: 99999px;
+
+    @include mq($media-sm) {
+      height: 50px;
+      padding: 8px 10px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$media-md: 1279;
+$media-sm: 639;
+
+$container-px: 20px;
+
+$container-lg: 1200px;
+$container-md: 560px;
+$container-sm: 320px;
+
+$logo-w: 191px;
+$logo-h: 70px;
+
+$container-w-lg: #{$container-px * 2 + $container-lg};
+$container-w-md: #{$container-px * 2 + $container-md};
+$container-w-sm: #{$container-px * 2 + $container-sm};

@@ -1,0 +1,68 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+label, input, textarea, button, select, a, summary {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus, button:focus, input:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  outline: none !important;
+  border: 0 !important;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+svg {
+  display: block;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary {
+  list-style: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.page-body {
+  background-color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+.page-body.closed {
+  overflow: hidden;
+}
+
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1240px;
+}
+@media (max-width: 1278.98px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (max-width: 638.98px) {
+  .container {
+    max-width: 360px;
+  }
+}

@@ -1,0 +1,102 @@
+@import "././resources/styles/_/variables";
+@import "././resources/styles/_/mixins";
+
+.footer {
+  display: block;
+  margin: 50px 0 80px;
+  padding: 45px 30px;
+  background: #F8F8F8;
+  border-radius: 6px;
+
+  @include mq($media-md) {
+    margin-bottom: 40px;
+    padding: 80px 20px 70px;
+  }
+
+  @include mq($media-sm) {
+    margin: 30px -#{$container-px} 40px;
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
+  &-text {
+    display: block;
+    margin: 0 0 40px;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+
+    @include mq($media-md) {
+      margin-bottom: 60px;
+    }
+
+    @include mq($media-sm) {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+  }
+}
+
+.whatsapp {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    padding: 8px 20px;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 99999px;
+
+    @include mq($media-sm) {
+      flex-direction: column;
+      height: 150px;
+      padding: 16px 64px;
+      border-radius: 45px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: #4279E3;
+      }
+    }
+
+    &:active {
+      border-color: #4279E3;
+    }
+  }
+
+  &-image {
+    display: block;
+    margin: 0 30px 0 0;
+    width: 199px;
+    height: 50px;
+
+    @include mq($media-sm) {
+      margin: 0 0 16px 0;
+      width: auto;
+      height: 40px;
+    }
+  }
+
+  &-text {
+    display: block;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 36px;
+    text-align: left;
+    color: #4279E3;
+
+    @include mq($media-sm) {
+      font-size: 24px;
+    }
+  }
+}
