@@ -66,3 +66,45 @@ details > summary {
     max-width: 360px;
   }
 }
+
+.visa {
+  height: 44px;
+}
+@media (max-width: 1278.98px) {
+  .visa {
+    height: 44px;
+  }
+}
+@media (max-width: 638.98px) {
+  .visa {
+    height: 26px;
+  }
+}
+
+.sberbank {
+  height: 44px;
+}
+@media (max-width: 1278.98px) {
+  .sberbank {
+    height: 44px;
+  }
+}
+@media (max-width: 638.98px) {
+  .sberbank {
+    height: 22px;
+  }
+}
+
+.tinkoff {
+  height: 78px;
+}
+@media (max-width: 1278.98px) {
+  .tinkoff {
+    height: 58px;
+  }
+}
+@media (max-width: 638.98px) {
+  .tinkoff {
+    height: 40px;
+  }
+}

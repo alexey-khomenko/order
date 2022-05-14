@@ -1,0 +1,217 @@
+@import "././resources/styles/_/variables";
+@import "././resources/styles/_/mixins";
+
+.modals {
+  display: none;
+  position: fixed;
+  padding: 6px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  &.opened {
+    display: flex;
+  }
+}
+
+.modal {
+  display: none;
+  margin: auto;
+  padding: 60px 50px 70px;
+  max-width: 736px;
+  max-height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #606060;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include mq($media-md) {
+    padding-bottom: 50px;
+    max-width: 600px;
+  }
+
+  @include mq($media-sm) {
+    padding: 30px;
+    max-width: 340px;
+  }
+
+  &.opened {
+    display: block;
+  }
+
+  &-image {
+    display: block;
+    max-width: 100%;
+    width: auto;
+  }
+
+  &-title {
+    display: block;
+    margin: 30px 0 80px;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: left;
+    color: #000000;
+
+    @include mq($media-md) {
+      margin-bottom: 40px;
+    }
+
+    @include mq($media-sm) {
+      margin: 20px 0 30px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &-radio {
+    display: none;
+  }
+
+  &-form {
+    display: block;
+  }
+
+  &-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 34px;
+
+    @include mq($media-sm) {
+     gap: 22px;
+    }
+  }
+
+  &-option {
+    display: block;
+    position: relative;
+    padding: 0 0 0 32px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    color: #000000;
+    cursor: pointer;
+
+    @include mq($media-sm) {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &-option::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #C9CAD2;
+    border-radius: 99999px;
+  }
+
+  &-radio:checked + &-option::before {
+    border-color: #4279E3;
+  }
+
+  &-radio:checked + &-option::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    background-color: #4279E3;
+    border-radius: 99999px;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 100px 0 0;
+
+    @include mq($media-md) {
+      flex-direction: column-reverse;
+      margin-top: 50px;
+    }
+
+    @include mq($media-sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    width: 318px;
+    height: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #4279E3;
+    border-radius: 99999px;
+    background-color: #4279E3;
+
+    @include mq($media-sm) {
+      width: 100%;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: #4279E3;
+        background-color: #FFFFFF;
+      }
+    }
+
+    &:active {
+      color: #4279E3;
+      background-color: #FFFFFF;
+    }
+  }
+
+  &-right {
+    display: block;
+    margin: 0 0 0 40px;
+
+    @include mq($media-md) {
+      margin: 0 0 30px 0;
+    }
+
+    @include mq($media-sm) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &-subtitle {
+    display: block;
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: #606060;
+  }
+
+  &-price {
+    display: block;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: left;
+    color: #000000;
+  }
+}

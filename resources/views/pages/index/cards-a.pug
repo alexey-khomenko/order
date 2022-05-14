@@ -4,6 +4,6 @@ div(class="cards")
       div(class="card-wrapper")
         img(src=`${card.src}`, class=`card-image ${card.cls}`, alt="")
       hr(class="card-hr")
-      button(type="button", class="card-button")
+      button(type="button", class="card-button", data-target=`modal-${card.id}`)
         span
           | Оплатить

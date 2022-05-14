@@ -4,45 +4,52 @@ block title
   | Оплата заказа №71964
 
 block main
-  - title = "Оплата на территории России";
-  - price = "11 000₽";
-  include index/heading
-  -
-    cards = [
-      {
-        src: 'images/visa.svg',
-        cls: 'visa',
-      },
-      {
-        src: 'images/sberbank.svg',
-        cls: 'sberbank',
-      },
-      {
-        src: 'images/tinkoff.svg',
-        cls: 'tinkoff',
-      },
-    ];
-  include index/cards-a
+  main(class="main")
+    - title = 'Оплата на территории России';
+    - price = '11 000₽';
+    include index/heading
+    -
+      cards = [
+        {
+          id: 1,
+          src: 'images/visa.svg',
+          cls: 'visa',
+        },
+        {
+          id: 2,
+          src: 'images/sberbank.svg',
+          cls: 'sberbank',
+        },
+        {
+          id: 3,
+          src: 'images/tinkoff.svg',
+          cls: 'tinkoff',
+        },
+      ];
+    include index/cards-a
 
-  - title = "Оплата по всему миру";
-  - price = "119$";
-  include index/heading
-  -
-    cards = [
-      {
-        src: 'images/visa.svg',
-        cls: 'visa',
-        title: 'Оплата картой',
-      },
-      {
-        src: 'images/sberbank.svg',
-        cls: 'sberbank',
-        title: 'Сбербанк',
-      },
-      {
-        src: 'images/tinkoff.svg',
-        cls: 'tinkoff',
-        title: 'Тинькофф',
-      },
-    ];
-  include index/cards-b
+    - title = 'Оплата по всему миру';
+    - price = '119$';
+    include index/heading
+    -
+      cards = [
+        {
+          id: 4,
+          src: 'images/visa.svg',
+          cls: 'visa',
+          title: 'Оплата картой',
+        },
+        {
+          id: 5,
+          src: 'images/sberbank.svg',
+          cls: 'sberbank',
+          title: 'Сбербанк',
+        },
+        {
+          id: 6,
+          src: 'images/tinkoff.svg',
+          cls: 'tinkoff',
+          title: 'Тинькофф',
+        },
+      ];
+    include index/cards-b

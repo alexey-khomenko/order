@@ -10,6 +10,6 @@ div(class="cards")
         | Для населения всего мира
       div(class="card-price")
         | 119$
-      button(type="button", class="card-button")
+      button(type="button", class="card-button", data-target=`modal-${card.id}`)
         span
           | Оплатить

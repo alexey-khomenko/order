@@ -26,61 +26,203 @@
           </div>
         </div>
       </header>
-      <div class="heading">
-        <h2 class="heading-title">Оплата на территории России</h2>
-        <div class="heading-price"><span>11 000₽</span></div>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-wrapper"><img class="card-image visa" src="images/visa.svg" alt=""></div>
-          <hr class="card-hr">
-          <button class="card-button" type="button"><span>Оплатить</span></button>
+      <main class="main">
+        <div class="heading">
+          <h2 class="heading-title">Оплата на территории России</h2>
+          <div class="heading-price"><span>11 000₽</span></div>
         </div>
-        <div class="card">
-          <div class="card-wrapper"><img class="card-image sberbank" src="images/sberbank.svg" alt=""></div>
-          <hr class="card-hr">
-          <button class="card-button" type="button"><span>Оплатить</span></button>
+        <div class="cards">
+          <div class="card">
+            <div class="card-wrapper"><img class="card-image visa" src="images/visa.svg" alt=""></div>
+            <hr class="card-hr">
+            <button class="card-button" type="button" data-target="modal-1"><span>Оплатить</span></button>
+          </div>
+          <div class="card">
+            <div class="card-wrapper"><img class="card-image sberbank" src="images/sberbank.svg" alt=""></div>
+            <hr class="card-hr">
+            <button class="card-button" type="button" data-target="modal-2"><span>Оплатить</span></button>
+          </div>
+          <div class="card">
+            <div class="card-wrapper"><img class="card-image tinkoff" src="images/tinkoff.svg" alt=""></div>
+            <hr class="card-hr">
+            <button class="card-button" type="button" data-target="modal-3"><span>Оплатить</span></button>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-wrapper"><img class="card-image tinkoff" src="images/tinkoff.svg" alt=""></div>
-          <hr class="card-hr">
-          <button class="card-button" type="button"><span>Оплатить</span></button>
+        <div class="heading">
+          <h2 class="heading-title">Оплата по всему миру</h2>
+          <div class="heading-price"><span>119$</span></div>
         </div>
-      </div>
-      <div class="heading">
-        <h2 class="heading-title">Оплата по всему миру</h2>
-        <div class="heading-price"><span>119$</span></div>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-wrapper"><img class="card-image visa" src="images/visa.svg" alt=""></div>
-          <div class="card-title">Оплата картой</div>
-          <hr class="card-hr">
-          <div class="card-subtitle">Для населения всего мира</div>
-          <div class="card-price">119$</div>
-          <button class="card-button" type="button"><span>Оплатить</span></button>
+        <div class="cards">
+          <div class="card">
+            <div class="card-wrapper"><img class="card-image visa" src="images/visa.svg" alt=""></div>
+            <div class="card-title">Оплата картой</div>
+            <hr class="card-hr">
+            <div class="card-subtitle">Для населения всего мира</div>
+            <div class="card-price">119$</div>
+            <button class="card-button" type="button" data-target="modal-4"><span>Оплатить</span></button>
+          </div>
+          <div class="card">
+            <div class="card-wrapper"><img class="card-image sberbank" src="images/sberbank.svg" alt=""></div>
+            <div class="card-title">Сбербанк</div>
+            <hr class="card-hr">
+            <div class="card-subtitle">Для населения всего мира</div>
+            <div class="card-price">119$</div>
+            <button class="card-button" type="button" data-target="modal-5"><span>Оплатить</span></button>
+          </div>
+          <div class="card">
+            <div class="card-wrapper"><img class="card-image tinkoff" src="images/tinkoff.svg" alt=""></div>
+            <div class="card-title">Тинькофф</div>
+            <hr class="card-hr">
+            <div class="card-subtitle">Для населения всего мира</div>
+            <div class="card-price">119$</div>
+            <button class="card-button" type="button" data-target="modal-6"><span>Оплатить</span></button>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-wrapper"><img class="card-image sberbank" src="images/sberbank.svg" alt=""></div>
-          <div class="card-title">Сбербанк</div>
-          <hr class="card-hr">
-          <div class="card-subtitle">Для населения всего мира</div>
-          <div class="card-price">119$</div>
-          <button class="card-button" type="button"><span>Оплатить</span></button>
-        </div>
-        <div class="card">
-          <div class="card-wrapper"><img class="card-image tinkoff" src="images/tinkoff.svg" alt=""></div>
-          <div class="card-title">Тинькофф</div>
-          <hr class="card-hr">
-          <div class="card-subtitle">Для населения всего мира</div>
-          <div class="card-price">119$</div>
-          <button class="card-button" type="button"><span>Оплатить</span></button>
-        </div>
-      </div>
+      </main>
       <footer class="footer">
         <div class="footer-text">Если есть вопросы по оплате, напишите Алине</div>
         <div class="whatsapp-wrapper"><a class="whatsapp-link" href="https://wa.me/79321241224" target="_blank"><img class="whatsapp-image" src="images/whatsapp.svg" alt=""><span class="whatsapp-text">+79321241224</span></a></div>
       </footer>
+    </div>
+    <div class="modals">
+      <div class="modal modal-1"><img class="modal-image visa" src="images/visa.svg" alt="">
+        <h3 class="modal-title">Выгодная рассрочка от VISA</h3>
+        <form class="modal-form" method="POST" action="/">
+          <input type="hidden" name="option" value="opt-1">
+          <div class="modal-options">
+            <input class="modal-radio" type="radio" name="options" value="opt-1-1" id="o-1-0">
+            <label class="modal-option" for="o-1-0">Оплата по частям. 3 месяца без предоплаты</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-1-2" id="o-1-1">
+            <label class="modal-option" for="o-1-1">Беспроцентная рассрочка на 8 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-1-3" id="o-1-2">
+            <label class="modal-option" for="o-1-2">Беспроцентная рассрочка на 10 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-1-4" id="o-1-3">
+            <label class="modal-option" for="o-1-3">Беспроцентная рассрочка на 12 месяцев</label>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-button" type="submit"><span>Оплатить</span></button>
+            <div class="modal-right">
+              <div class="modal-subtitle">Для населения России</div>
+              <div class="modal-price">11000₽</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal modal-2"><img class="modal-image sberbank" src="images/sberbank.svg" alt="">
+        <h3 class="modal-title">Выгодная рассрочка от Сбербанк</h3>
+        <form class="modal-form" method="POST" action="/">
+          <input type="hidden" name="option" value="opt-2">
+          <div class="modal-options">
+            <input class="modal-radio" type="radio" name="options" value="opt-2-1" id="o-2-0">
+            <label class="modal-option" for="o-2-0">Оплата по частям. 3 месяца без предоплаты</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-2-2" id="o-2-1">
+            <label class="modal-option" for="o-2-1">Беспроцентная рассрочка на 8 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-2-3" id="o-2-2">
+            <label class="modal-option" for="o-2-2">Беспроцентная рассрочка на 10 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-2-4" id="o-2-3">
+            <label class="modal-option" for="o-2-3">Беспроцентная рассрочка на 12 месяцев</label>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-button" type="submit"><span>Оплатить</span></button>
+            <div class="modal-right">
+              <div class="modal-subtitle">Для населения России</div>
+              <div class="modal-price">11000₽</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal modal-3"><img class="modal-image tinkoff" src="images/tinkoff.svg" alt="">
+        <h3 class="modal-title">Выгодная рассрочка от Тинькофф</h3>
+        <form class="modal-form" method="POST" action="/">
+          <input type="hidden" name="option" value="opt-3">
+          <div class="modal-options">
+            <input class="modal-radio" type="radio" name="options" value="opt-3-1" id="o-3-0">
+            <label class="modal-option" for="o-3-0">Оплата по частям. 3 месяца без предоплаты</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-3-2" id="o-3-1">
+            <label class="modal-option" for="o-3-1">Беспроцентная рассрочка на 8 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-3-3" id="o-3-2">
+            <label class="modal-option" for="o-3-2">Беспроцентная рассрочка на 10 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-3-4" id="o-3-3">
+            <label class="modal-option" for="o-3-3">Беспроцентная рассрочка на 12 месяцев</label>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-button" type="submit"><span>Оплатить</span></button>
+            <div class="modal-right">
+              <div class="modal-subtitle">Для населения России</div>
+              <div class="modal-price">11000₽</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal modal-4"><img class="modal-image visa" src="images/visa.svg" alt="">
+        <h3 class="modal-title">Выгодная рассрочка от VISA</h3>
+        <form class="modal-form" method="POST" action="/">
+          <input type="hidden" name="option" value="opt-4">
+          <div class="modal-options">
+            <input class="modal-radio" type="radio" name="options" value="opt-4-1" id="o-4-0">
+            <label class="modal-option" for="o-4-0">Оплата по частям. 3 месяца без предоплаты</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-4-2" id="o-4-1">
+            <label class="modal-option" for="o-4-1">Беспроцентная рассрочка на 8 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-4-3" id="o-4-2">
+            <label class="modal-option" for="o-4-2">Беспроцентная рассрочка на 10 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-4-4" id="o-4-3">
+            <label class="modal-option" for="o-4-3">Беспроцентная рассрочка на 12 месяцев</label>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-button" type="submit"><span>Оплатить</span></button>
+            <div class="modal-right">
+              <div class="modal-subtitle">Для остального мира</div>
+              <div class="modal-price">119$</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal modal-5"><img class="modal-image sberbank" src="images/sberbank.svg" alt="">
+        <h3 class="modal-title">Выгодная рассрочка от Сбербанк</h3>
+        <form class="modal-form" method="POST" action="/">
+          <input type="hidden" name="option" value="opt-5">
+          <div class="modal-options">
+            <input class="modal-radio" type="radio" name="options" value="opt-5-1" id="o-5-0">
+            <label class="modal-option" for="o-5-0">Оплата по частям. 3 месяца без предоплаты</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-5-2" id="o-5-1">
+            <label class="modal-option" for="o-5-1">Беспроцентная рассрочка на 8 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-5-3" id="o-5-2">
+            <label class="modal-option" for="o-5-2">Беспроцентная рассрочка на 10 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-5-4" id="o-5-3">
+            <label class="modal-option" for="o-5-3">Беспроцентная рассрочка на 12 месяцев</label>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-button" type="submit"><span>Оплатить</span></button>
+            <div class="modal-right">
+              <div class="modal-subtitle">Для остального мира</div>
+              <div class="modal-price">119$</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal modal-6"><img class="modal-image tinkoff" src="images/tinkoff.svg" alt="">
+        <h3 class="modal-title">Выгодная рассрочка от Тинькофф</h3>
+        <form class="modal-form" method="POST" action="/">
+          <input type="hidden" name="option" value="opt-6">
+          <div class="modal-options">
+            <input class="modal-radio" type="radio" name="options" value="opt-6-1" id="o-6-0">
+            <label class="modal-option" for="o-6-0">Оплата по частям. 3 месяца без предоплаты</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-6-2" id="o-6-1">
+            <label class="modal-option" for="o-6-1">Беспроцентная рассрочка на 8 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-6-3" id="o-6-2">
+            <label class="modal-option" for="o-6-2">Беспроцентная рассрочка на 10 месяцев</label>
+            <input class="modal-radio" type="radio" name="options" value="opt-6-4" id="o-6-3">
+            <label class="modal-option" for="o-6-3">Беспроцентная рассрочка на 12 месяцев</label>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-button" type="submit"><span>Оплатить</span></button>
+            <div class="modal-right">
+              <div class="modal-subtitle">Для остального мира</div>
+              <div class="modal-price">119$</div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="js/base.js" async="async"></script>
   </body>

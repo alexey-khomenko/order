@@ -68,3 +68,39 @@ details > summary {
     max-width: $container-w-sm;
   }
 }
+
+.visa {
+  height: 44px;
+
+  @include mq($media-md) {
+    height: 44px;
+  }
+
+  @include mq($media-sm) {
+    height: 26px;
+  }
+}
+
+.sberbank {
+  height: 44px;
+
+  @include mq($media-md) {
+    height: 44px;
+  }
+
+  @include mq($media-sm) {
+    height: 22px;
+  }
+}
+
+.tinkoff {
+  height: 78px;
+
+  @include mq($media-md) {
+    height: 58px;
+  }
+
+  @include mq($media-sm) {
+    height: 40px;
+  }
+}

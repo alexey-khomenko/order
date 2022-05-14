@@ -1,0 +1,187 @@
+-
+  modals = [
+    {
+      id: 1,
+      src: 'images/visa.svg',
+      cls: 'visa',
+      title: 'Выгодная рассрочка от VISA',
+      subtitle: 'Для населения России',
+      price: '11000₽',
+      option: 'opt-1',
+      options: [
+        {
+          value: 'opt-1-1',
+          title: 'Оплата по частям. 3 месяца без предоплаты',
+        },
+        {
+          value: 'opt-1-2',
+          title: 'Беспроцентная рассрочка на 8 месяцев',
+        },
+        {
+          value: 'opt-1-3',
+          title: 'Беспроцентная рассрочка на 10 месяцев',
+        },
+        {
+          value: 'opt-1-4',
+          title: 'Беспроцентная рассрочка на 12 месяцев',
+        },
+      ],
+    },
+    {
+      id: 2,
+      src: 'images/sberbank.svg',
+      cls: 'sberbank',
+      title: 'Выгодная рассрочка от Сбербанк',
+      subtitle: 'Для населения России',
+      price: '11000₽',
+      option: 'opt-2',
+      options: [
+        {
+          value: 'opt-2-1',
+          title: 'Оплата по частям. 3 месяца без предоплаты',
+        },
+        {
+          value: 'opt-2-2',
+          title: 'Беспроцентная рассрочка на 8 месяцев',
+        },
+        {
+          value: 'opt-2-3',
+          title: 'Беспроцентная рассрочка на 10 месяцев',
+        },
+        {
+          value: 'opt-2-4',
+          title: 'Беспроцентная рассрочка на 12 месяцев',
+        },
+      ],
+    },
+    {
+      id: 3,
+      src: 'images/tinkoff.svg',
+      cls: 'tinkoff',
+      title: 'Выгодная рассрочка от Тинькофф',
+      subtitle: 'Для населения России',
+      price: '11000₽',
+      option: 'opt-3',
+      options: [
+        {
+          value: 'opt-3-1',
+          title: 'Оплата по частям. 3 месяца без предоплаты',
+        },
+        {
+          value: 'opt-3-2',
+          title: 'Беспроцентная рассрочка на 8 месяцев',
+        },
+        {
+          value: 'opt-3-3',
+          title: 'Беспроцентная рассрочка на 10 месяцев',
+        },
+        {
+          value: 'opt-3-4',
+          title: 'Беспроцентная рассрочка на 12 месяцев',
+        },
+      ],
+    },
+    {
+      id: 4,
+      src: 'images/visa.svg',
+      cls: 'visa',
+      title: 'Выгодная рассрочка от VISA',
+      subtitle: 'Для остального мира',
+      price: '119$',
+      option: 'opt-4',
+      options: [
+        {
+          value: 'opt-4-1',
+          title: 'Оплата по частям. 3 месяца без предоплаты',
+        },
+        {
+          value: 'opt-4-2',
+          title: 'Беспроцентная рассрочка на 8 месяцев',
+        },
+        {
+          value: 'opt-4-3',
+          title: 'Беспроцентная рассрочка на 10 месяцев',
+        },
+        {
+          value: 'opt-4-4',
+          title: 'Беспроцентная рассрочка на 12 месяцев',
+        },
+      ],
+    },
+    {
+      id: 5,
+      src: 'images/sberbank.svg',
+      cls: 'sberbank',
+      title: 'Выгодная рассрочка от Сбербанк',
+      subtitle: 'Для остального мира',
+      price: '119$',
+      option: 'opt-5',
+      options: [
+        {
+          value: 'opt-5-1',
+          title: 'Оплата по частям. 3 месяца без предоплаты',
+        },
+        {
+          value: 'opt-5-2',
+          title: 'Беспроцентная рассрочка на 8 месяцев',
+        },
+        {
+          value: 'opt-5-3',
+          title: 'Беспроцентная рассрочка на 10 месяцев',
+        },
+        {
+          value: 'opt-5-4',
+          title: 'Беспроцентная рассрочка на 12 месяцев',
+        },
+      ],
+    },
+    {
+      id: 6,
+      src: 'images/tinkoff.svg',
+      cls: 'tinkoff',
+      title: 'Выгодная рассрочка от Тинькофф',
+      subtitle: 'Для остального мира',
+      price: '119$',
+      option: 'opt-6',
+      options: [
+        {
+          value: 'opt-6-1',
+          title: 'Оплата по частям. 3 месяца без предоплаты',
+        },
+        {
+          value: 'opt-6-2',
+          title: 'Беспроцентная рассрочка на 8 месяцев',
+        },
+        {
+          value: 'opt-6-3',
+          title: 'Беспроцентная рассрочка на 10 месяцев',
+        },
+        {
+          value: 'opt-6-4',
+          title: 'Беспроцентная рассрочка на 12 месяцев',
+        },
+      ],
+    },
+  ];
+div(class="modals")
+  each modal in modals
+    div(class=`modal modal-${modal.id}`)
+      img(src=`${modal.src}`, class=`modal-image ${modal.cls}`, alt="")
+      h3(class="modal-title")
+        | #{modal.title}
+      form(method="POST", class="modal-form", action="/")
+        input(type="hidden", name="option", value=`${modal.option}`)
+        div(class="modal-options")
+          each option, idx in modal.options
+            input(type="radio", class="modal-radio", name="options", value=`${option.value}`, id=`o-${modal.id}-${idx}`)
+            label(class="modal-option", for=`o-${modal.id}-${idx}`)
+              | #{option.title}
+        div(class="modal-footer")
+          button(type="submit", class="modal-button")
+            span
+              | Оплатить
+          div(class="modal-right")
+            div(class="modal-subtitle")
+              | #{modal.subtitle}
+            div(class="modal-price")
+              | #{modal.price}
