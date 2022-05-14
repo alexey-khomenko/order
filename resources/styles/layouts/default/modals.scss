@@ -18,6 +18,7 @@
 
 .modal {
   display: none;
+  position: relative;
   margin: auto;
   padding: 60px 50px 70px;
   max-width: 736px;
@@ -213,5 +214,59 @@
     line-height: 40px;
     text-align: left;
     color: #000000;
+  }
+}
+
+.close {
+  display: block;
+  position: absolute;
+  right: 50px;
+  width: 32px;
+  height: 32px;
+  color: #000000;
+  cursor: pointer;
+
+  @include mq($media-sm) {
+    right: 30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #4279E3;
+    }
+  }
+
+  &:active {
+    color: #4279E3;
+  }
+
+  &.visa {
+    top: 66px;
+
+    @include mq($media-sm) {
+      top: 34px;
+    }
+  }
+
+  &.sberbank {
+    top: 66px;
+
+    @include mq($media-sm) {
+      top: 31px;
+    }
+  }
+
+  &.tinkoff {
+    top: 84px;
+
+    @include mq($media-md) {
+      top: 74px;
+    }
+
+    @include mq($media-sm) {
+      top: 41px;
+    }
   }
 }

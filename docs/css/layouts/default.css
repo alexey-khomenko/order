@@ -266,6 +266,7 @@
 
 .modal {
   display: none;
+  position: relative;
   margin: auto;
   padding: 60px 50px 70px;
   max-width: 736px;
@@ -458,6 +459,60 @@
   color: #000000;
 }
 
+.close {
+  display: block;
+  position: absolute;
+  right: 50px;
+  width: 32px;
+  height: 32px;
+  color: #000000;
+  cursor: pointer;
+}
+@media (max-width: 638.98px) {
+  .close {
+    right: 30px;
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (hover: hover) {
+  .close:hover {
+    color: #4279E3;
+  }
+}
+.close:active {
+  color: #4279E3;
+}
+.close.visa {
+  top: 66px;
+}
+@media (max-width: 638.98px) {
+  .close.visa {
+    top: 34px;
+  }
+}
+.close.sberbank {
+  top: 66px;
+}
+@media (max-width: 638.98px) {
+  .close.sberbank {
+    top: 31px;
+  }
+}
+.close.tinkoff {
+  top: 84px;
+}
+@media (max-width: 1278.98px) {
+  .close.tinkoff {
+    top: 74px;
+  }
+}
+@media (max-width: 638.98px) {
+  .close.tinkoff {
+    top: 41px;
+  }
+}
+
 .heading {
   display: flex;
   justify-content: flex-start;
@@ -538,7 +593,7 @@
   display: block;
   padding: 30px;
   border: 1px solid #C9CAD2;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 @media (max-width: 1278.98px) {
   .card {

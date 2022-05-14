@@ -49,6 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (e) {
+    if (!e.target.closest('.close')) return true;
+
+    window.closeModal();
+  });
+
+  document.addEventListener('click', function (e) {
     const btn = e.target.closest('.card-button');
 
     if (!btn) return true;

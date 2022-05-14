@@ -166,6 +166,9 @@
 div(class="modals")
   each modal in modals
     div(class=`modal modal-${modal.id}`)
+      svg(width="38", height="38", viewBox="0 0 38 38", fill="none", xmlns="http://www.w3.org/2000/svg", class=`close ${modal.cls}`)
+        line(x1="36.5684", y1="2.0938", x2="2.0918", y2="36.5705", stroke="currentColor", stroke-width="2")
+        line(x1="35.8613", y1="36.5704", x2="2.3846", y2="2.0937", stroke="currentColor", stroke-width="2")
       img(src=`${modal.src}`, class=`modal-image ${modal.cls}`, alt="")
       h3(class="modal-title")
         | #{modal.title}

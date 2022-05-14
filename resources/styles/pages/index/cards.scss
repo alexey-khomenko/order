@@ -20,7 +20,7 @@
   display: block;
   padding: 30px;
   border: 1px solid #C9CAD2;
-  border-radius: 6px;
+  border-radius: 12px;
 
   @include mq($media-md) {
     display: flex;
