@@ -54,7 +54,7 @@
     padding: 8px 20px;
     text-decoration: none;
     border: 1px solid #000000;
-    border-radius: 99999px;
+    border-radius: 12px;
 
     @include mq($media-sm) {
       flex-direction: column;
